@@ -20,7 +20,9 @@ int main(){
     
     gerar_arq_aleat(10);
     int vet[10];
-    
+    /*Temos que fazer a função para inserir os números
+    desordenados do arquivo no vetor
+    */
     selection_sort(vet, 10);
 
 
