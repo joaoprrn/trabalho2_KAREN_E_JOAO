@@ -11,20 +11,25 @@
 #include "selectionsort.h"
 
 
+void desordena_vetor();
 
 int main(){
-    FILE *file;
-    file = fopen("arquivo.txt","w");
+    
 
-    srand(time(NULL));
+    
+    gerar_arq_aleat(10);
+    int vet[10] = ordena_arquivo();
+    selection_sort(vet, 10);
+    desordena_vetor();
 
     for(int i = 0; i < 10; i++){
-        fprintf(file,"%d",rand() % 10);
-        fprintf(file,"\n");
+        printf("%d ",vet[i]);
     }
+    printf("\n");
+    return 0;
+}
 
-    fclose(file);
-
+void desordena_vetor(){
     file = fopen("arquivo.txt","r");
 
     if(file == NULL){
@@ -39,24 +44,4 @@ int main(){
 
     }
     fclose(file);
-
-// INICIO SELECTION SORT ===================================
-    printf("\n============================");
-    printf("\n\t ALGORTIMO: Selection Sort");
-    printf("\n\t TAMANHO: 10");
-    clock_t t; 
-    t = clock();
-    selection_sort(vet, 10);
-    t = clock() - t; 
-    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds 
-    printf("\n\t TEMPO: %f", time_taken);
-    printf("\n\t ORDENADO: OK!");
-// FIM SELECTION SORT ===================================
-
-
-    for(int i = 0; i < 10; i++){
-        printf("%d ",vet[i]);
-    }
-    printf("\n");
-    return 0;
 }

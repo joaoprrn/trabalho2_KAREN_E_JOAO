@@ -5,6 +5,7 @@
         "insertionsort.h": "c",
         "bubblesort.h": "c",
         "heapsort.h": "c",
-        "quicksort.h": "c"
+        "quicksort.h": "c",
+        "math.h": "c"
     }
 }
