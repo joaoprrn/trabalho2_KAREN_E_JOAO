@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "INSERTIONSORT.C": "cpp",
+        "HEAPSORT.C": "cpp",
+        "insertionsort.h": "c",
+        "bubblesort.h": "c",
+        "heapsort.h": "c",
+        "quicksort.h": "c"
+    }
+}
