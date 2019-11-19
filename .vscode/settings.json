@@ -6,6 +6,7 @@
         "bubblesort.h": "c",
         "heapsort.h": "c",
         "quicksort.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "stdlib.h": "c"
     }
 }

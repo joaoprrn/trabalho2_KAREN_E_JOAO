@@ -16,10 +16,14 @@ void selection_sort(int num[], int tam) {
   {
      min = i;
      for (j = (i+1); j < tam; j++) {
-       if(num[j] < num[min]) 
-         min = j;
+       if(num[j] < num[min]) {
+        comparacoes++;
+        min = j;
+       }
+         
      }
      if (num[i] != num[min]) {
+       trocas++;
        aux = num[i];
        num[i] = num[min];
        num[min] = aux;
@@ -27,6 +31,8 @@ void selection_sort(int num[], int tam) {
   }
 
   t = clock() - t; 
+  printf("\n========================================\n");
+  printf("\t ALGORITMO: Selection SortS");
   cont(trocas, comparacoes, t);
 }
 

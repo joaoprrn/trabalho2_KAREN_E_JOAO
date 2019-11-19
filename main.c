@@ -3,6 +3,7 @@
 #include <math.h>
 #include <time.h>
 
+#include "arquivo.h"
 #include "bubblesort.h"
 #include "heapsort.h"
 #include "insertionsort.h"
@@ -11,17 +12,26 @@
 #include "selectionsort.h"
 
 
-void desordena_vetor();
+//void desordena_vetor();
 
 int main(){
     
 
     
     gerar_arq_aleat(10);
-    int vet[10] = ordena_arquivo();
+    int vet[10];
+    
     selection_sort(vet, 10);
-    desordena_vetor();
 
+
+
+    printf("\n\n printa vetor \n\n ");
+    for(int i = 0; i < 10; i++){
+        printf("%d ",vet[i]);
+    }
+    printf("\n");
+    
+    printf("\n\n printa vetor \n\n ");
     for(int i = 0; i < 10; i++){
         printf("%d ",vet[i]);
     }
@@ -29,7 +39,7 @@ int main(){
     return 0;
 }
 
-void desordena_vetor(){
+/*void desordena_vetor(){
     file = fopen("arquivo.txt","r");
 
     if(file == NULL){
@@ -45,3 +55,4 @@ void desordena_vetor(){
     }
     fclose(file);
 }
+*/

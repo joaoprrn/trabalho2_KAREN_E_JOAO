@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "arquivo.h"
 
 
@@ -18,8 +19,7 @@ void gerar_arq_aleat(int quant){
 
 }
 
-int *ordena_arquivo(){
-    int vet[10];
+int* ordena_arquivo(int *vet){
     FILE *file;
     file = fopen("arquivo.txt","r");
 
