@@ -19,7 +19,9 @@ void gerar_arq_aleat(int quant){
 
 }
 
-int* ordena_arquivo(int *vet){
+
+
+/*int* ordena_arquivo(int *vet){
     FILE *file;
     file = fopen("arquivo.txt","r");
 
@@ -35,5 +37,5 @@ int* ordena_arquivo(int *vet){
 
     }
     return vet;
-}
+}*/
 
