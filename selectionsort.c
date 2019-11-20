@@ -31,7 +31,7 @@ void selection_sort(int num[], int tam) {
   }
 
   t = clock() - t; 
-  printf("\n========================================\n");
+  printf("\n\n========================================\n");
   printf("\t ALGORITMO: Selection SortS");
   cont(trocas, comparacoes, t);
 }
