@@ -8,8 +8,8 @@ void heapsort(int a[], int n) {
     long long int trocas = 0, comparacoes = 0;
     
     // inicio do tempo
-    clock_t t; 
-    t = clock();
+    clock_t tempo; 
+    tempo = clock();
     int i = n / 2, pai, filho, t;
     while(1) {
         if (i > 0) {
@@ -41,7 +41,7 @@ void heapsort(int a[], int n) {
         a[pai] = t;
    }
     
-    t = clock() - t; 
+    tempo = clock() - t; 
     printf("\n\n========================================\n");
     printf("\t ALGORITMO: Heap SortS");
     cont(trocas, comparacoes, t);
