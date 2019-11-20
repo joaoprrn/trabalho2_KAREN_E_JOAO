@@ -12,46 +12,55 @@
 #include "selectionsort.h"
 // gcc arquivo.c contadores.c bubblesort.c heapsort.c insertionsort.c merge.c quicksort.c selectionsort.c main.c -o main.out
 
-//void desordena_vetor();
-
 // protótipo da funcao menu
 int Menu();
 
 int main(){
+
+    while(1){  // só para quando o usuario escolher sair   
         
-    
-    int opcao = Menu();
+        // recebe a opcao que o usuario escolheu no menu e coloca na variavel 'opcao'
+        int opcao = Menu();
 
-    // FUNCIONAMENTO DAS OPÇÕES DO MENU
-    // 1- Gerar Arquivo
-    // 2- Ordenar Arquivo
-    // 3- Sair
-    if (opcao == 1){
-        //usuario vai escolher qual o tamanho do arquivo que ele quer
-        int tamanhoArquivo=0;
-        printf("\n ======= GERAR ARQUIVO ========\n");
-        printf("\t Tamanho do arquivo: ");
-        scanf("%d", &tamanhoArquivo);
+        if (opcao == 1){ // 1- Gerar Arquivo
+        
+            //usuario vai escolher qual o tamanho do arquivo que ele quer
+            int tamanhoArquivo=0;
+            printf("\n ======= GERAR ARQUIVO ========\n");
+            printf("\t Tamanho do arquivo: ");
+            scanf("%d", &tamanhoArquivo);
 
-        // gera o arquivo com base no tamanho que o usuario quer
-        gerar_arq_aleat(tamanhoArquivo);
-    }
-    else if (opcao == 2){
+            // gera o arquivo com base no tamanho que o usuario quer
+            gerar_arq_aleat(tamanhoArquivo);
+            printf("\nArquivo gerado com sucesso!\n");
 
-        int vet[10];
-        selection_sort(vet, 10);
-        /*Temos que fazer a função para inserir os números
-        desordenados do arquivo no vetor pra chamar os outros algoritmos
-        */
+            // chama o menu novamente
+            opcao =  Menu();
+            if (opcao == 2){ // 2- Ordenar Arquivo
 
-       // chamar os outros algoritmos e desordenar o vetor sempre
+                int vet[10];
+                selection_sort(vet, 10);
+                /*Temos que fazer a função para inserir os números
+                desordenados do arquivo no vetor pra chamar os outros algoritmos
+                */
 
-    }
-    else if (opcao == 3){
-        // funcao da biblioteca stdlib, o 0 como parametro indica que nao ocorreu erro
-        exit (0);
-    }
+                // desordenar o vetor e chamar os outros algoritmos
+            }
+            else if (opcao == 3){ // 3- Sair
+                // funcao da biblioteca stdlib, o 0 como parametro indica que nao ocorreu erro
+                exit (0);
+            }
+        }
 
+        else if (opcao == 2){ // 2- Ordenar Arquivo
+            printf("\nPor favor, gere um arquivo!\n");
+
+        }
+        else if (opcao == 3){ // 3- Sair
+            // funcao da biblioteca stdlib, o 0 como parametro indica que nao ocorreu erro
+            exit (0);
+        }
+        }
     return 0;
 }
 
