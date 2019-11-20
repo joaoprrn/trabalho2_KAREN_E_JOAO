@@ -32,7 +32,7 @@ int main(){
 
             // gera o arquivo com base no tamanho que o usuario quer
             gerar_arq_aleat(tamanhoArquivo);
-            printf("\nArquivo gerado com sucesso!\n");
+            printf("\n\tArquivo gerado com sucesso!\n");
 
             // chama o menu novamente
             opcao =  Menu();
@@ -69,13 +69,13 @@ int Menu(){
     int opcaoMenu = 0;
 
     // exibe o menu
-    printf("===== PROJETO ORDENAÇÃO ======\n");
+    printf("\n\n===== PROJETO ORDENAÇÃO ======\n");
     printf("\t 1- Gerar Arquivo\n");
     printf("\t 2- Ordenar Arquivo\n");
     printf("\t 3- Sair\n");
 
     // lê a opcao que o usuário escolheu
-    scanf("%d \n ", &opcaoMenu); 
+    scanf("%d", &opcaoMenu); 
     return opcaoMenu;
 }
 
