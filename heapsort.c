@@ -44,7 +44,7 @@ void heapsort(int a[], int n) {
     tempo = clock() - t; 
     printf("\n\n========================================\n");
     printf("\t ALGORITMO: Heap SortS");
-    cont(trocas, comparacoes, t);
+    cont(trocas, comparacoes, tempo);
 
 }
 
