@@ -17,7 +17,13 @@ void heapsort(int a[], int n) {
             t = a[i];
         } else {
             n--;
-            if (n <= 0) return;
+            if (n <= 0){
+                tempo = clock() - t; 
+                printf("\n\n========================================\n");
+                printf("\t ALGORITMO: Heap SortS");
+                cont(trocas, comparacoes, tempo);
+                return;
+            }
             trocas++;
             t = a[n];
             a[n] = a[0];
@@ -41,10 +47,10 @@ void heapsort(int a[], int n) {
         a[pai] = t;
    }
     
-    tempo = clock() - t; 
+    /*tempo = clock() - t; 
     printf("\n\n========================================\n");
     printf("\t ALGORITMO: Heap SortS");
-    cont(trocas, comparacoes, tempo);
+    cont(trocas, comparacoes, tempo);*/
 
 }
 
