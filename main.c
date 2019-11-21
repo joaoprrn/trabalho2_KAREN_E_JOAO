@@ -38,8 +38,16 @@ int main(){
             opcao =  Menu();
             if (opcao == 2){ // 2- Ordenar Arquivo
 
-                int vet[10];
-                selection_sort(vet, 10);
+                int *vet = (int*) malloc(tamanhoArquivo * sizeof(int));
+                //int vet[10];
+                selection_sort(vet, tamanhoArquivo);
+                ordena_arquivo(vet, tamanhoArquivo);
+
+                /*for(int i = 0; i < tamanhoArquivo; i++){
+                    printf("%d ",vet[i]);
+                }
+                printf("\n");*/
+
                 /*Temos que fazer a função para inserir os números
                 desordenados do arquivo no vetor pra chamar os outros algoritmos
                 */
