@@ -42,6 +42,16 @@ int main(){
                 //int vet[10];
                 selection_sort(vet, tamanhoArquivo);
                 ordena_arquivo(vet, tamanhoArquivo);
+                bubbleSort(vet, tamanhoArquivo);
+                ordena_arquivo(vet, tamanhoArquivo);
+                heapsort(vet, tamanhoArquivo);
+                ordena_arquivo(vet, tamanhoArquivo);
+                insertionSort(vet, tamanhoArquivo);
+                ordena_arquivo(vet, tamanhoArquivo);
+                //merge(vet, tamanhoArquivo);
+                //ordena_arquivo(vet, tamanhoArquivo);
+                //quick_sort(vet, tamanhoArquivo);
+                //ordena_arquivo(vet, tamanhoArquivo);
 
                 /*for(int i = 0; i < tamanhoArquivo; i++){
                     printf("%d ",vet[i]);
